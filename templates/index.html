@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City Clustering</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align:center;">K-Means City Clustering Visualization</h1>
+    <div id="map" style="width: 90%; height: 600px; margin: auto;"></div>
+    <script>
+        var graph = {{ graphJSON | safe }};
+        Plotly.newPlot('map', graph.data, graph.layout);
+    </script>
+</body>
+</html>
